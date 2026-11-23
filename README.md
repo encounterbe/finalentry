@@ -108,7 +108,6 @@ alcohol, curfew for minors) that apply to each guest.
 
 The original school version was reworked with these protections:
 
-- No credentials in the repository – all secrets live in the git-ignored `config/config.php`
 - Prepared statements everywhere, output escaped with `htmlspecialchars`
 - CSRF tokens on every state-changing request, including logout
 - Session cookies are `HttpOnly`, `SameSite=Lax`, `Secure` on HTTPS, strict mode and session ID regeneration on login
