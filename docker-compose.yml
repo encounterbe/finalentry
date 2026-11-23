@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: finalentry
+      MYSQL_USER: finalentry
+      MYSQL_PASSWORD: finalentry-dev
+      MYSQL_ROOT_PASSWORD: finalentry-root-dev
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

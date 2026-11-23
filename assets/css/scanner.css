@@ -1,0 +1,21 @@
+#reader {
+  position: relative;
+  width: 100% !important;
+  height: 300px !important;
+  overflow: hidden;
+}
+
+#reader video,
+#reader canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover;
+}
+
+#scannerOverlay button {
+  position: relative;
+  z-index: 20;
+}
